@@ -1,0 +1,29 @@
+body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sana", Arial;
+    text-align: center;
+    background-image: url("https://media.istockphoto.com/vectors/poker-table-background-in-green-color-vector-id1206505233?k=20&m=1206505233&s=612x612&w=0&h=QBYw3shQkcZG2g1qG8udx8nrUsqnPZNooSaLNIs5elo=");
+    background-size: cover;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    color:goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+button {
+    color: #016f32;
+    width: 150px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
