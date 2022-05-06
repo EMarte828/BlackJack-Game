@@ -3,13 +3,12 @@ body {
     text-align: center;
     background-image: url("https://media.istockphoto.com/vectors/poker-table-background-in-green-color-vector-id1206505233?k=20&m=1206505233&s=612x612&w=0&h=QBYw3shQkcZG2g1qG8udx8nrUsqnPZNooSaLNIs5elo=");
     background-size: cover;
-    color: white;
+    color: #FFFFFF;
     font-weight: bold;
 }
 
 h1 {
-    color:goldenrod;
-}
+    color: #DAA520}
 
 #message-el {
     font-style: italic;
@@ -18,7 +17,7 @@ h1 {
 button {
     color: #016f32;
     width: 150px;
-    background: goldenrod;
+    background: #DAA520;
     padding-top: 5px;
     padding-bottom: 5px;
     font-weight: bold;
