@@ -1,12 +1,12 @@
 let cards = [] 
 let sum = 0
-let hasBlackJack = false
-let isAlive = false
+let userHasBlackJack = false
+let userIsAlive = false
 let message = ""
 
-let messageEl = document.getElementById("message-el")
-let sumEl = document.getElementById("sum-el")
-let cardsEl = document.getElementById("cards-el")
+let messageElement = document.getElementById("message-el")
+let sumElement = document.getElementById("sum-el")
+let cardsElement = document.getElementById("cards-el")
 
 
 let player = //creating an object
@@ -15,8 +15,8 @@ let player = //creating an object
     chips: 200,
 }
 
-let playerEl = document.getElementById("player-el")
-playerEl.textContent = player.name + ": $" + player.chips // key.value
+let playerElement = document.getElementById("player-el")
+playerElement.textContent = player.name + ": $" + player.chips // key.value
 
 function getRandomCard()
 {
@@ -32,9 +32,9 @@ function getRandomCard()
     }    
 }
 
-function startGame()
+function startGameButton()
 {
-    isAlive = true
+    userIsAlive = true
 
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
@@ -42,46 +42,46 @@ function startGame()
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
     
-    renderGame()
+    restartGame()
 }
 
-function renderGame()
+function restartGame()
 {
    
-    cardsEl.textContent = "Cards: "
+    cardsElement.textContent = "Cards: "
 
     for (let i = 0; i < cards.length; i++)
     {
-        cardsEl.textContent += cards[i] + " "
+        cardsElement.textContent += cards[i] + " "
     }
     
-    sumEl.textContent = "Sum: " + sum
+    sumElement.textContent = "Sum: " + sum
     
 
     if (sum <= 20)
     {
-        message = "Do you want to draw a new card?"
+        message = "Would you like to draw a new card?"
     } else if (sum === 21)
     {
-        message = "Wohoo! You've got Blackjack!"
-        hasBlackJack = true
+        message = "You won! You've scored Blackjack!"
+        userHasBlackJack = true
     } else
     {
-        message = "You're out of the game!"
-        isAlive = false
+        message = "You've lost!"
+        userIsAlive = false
     }
 
 
 }
 
-function newCard()
+function newCardButton()
 {
-    if (isAlive === true && hasBlackJack === false)
+    if (userIsAlive === true && userHasBlackJack === false)
     {
         let card = getRandomCard()
         sum += card
         cards.push(card)
         console.log(cards)
-        renderGame()
+        restartGame()
     } 
 }
